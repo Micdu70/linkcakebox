@@ -5,9 +5,10 @@ $host = $_SERVER['HTTP_HOST'];
 
 require_once('conf.php');
 
-$optionlink = $onglet === true ? 'window.open':'window.location.replace';
+$optionlink = $onglet === true ? 'window.open' : 'window.location.assign';
 
-$jResult .= "plugin.url = '".$url."';";
+$jResult .= "plugin.baseurl = '".$baseurl."';";
+$jResult .= "plugin.accessurl = '".$accessurl."';";
 $jResult .= "plugin.optionlink = '".$optionlink."';";
 $jResult .= "plugin.dirpath = '".$dirpath."';";
 
